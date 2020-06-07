@@ -1,8 +1,15 @@
 const express = require('express'); //eslint-disable-line
 const app = express();
-const port = 3001;
+const port = 3002;
 
-app.get('/', (req, res) => res.send('Hello World'));
+app.use(express.json());
+app.use(require('cors')({
+  origin: true,
+  credentials: true,
+}));
 
-app.listen(port, () => console.log(`pricescraper running on port ${port}`));
+app.get('/', (req, res) => res.send('Hello Whirled'));
+app.use('/api/price', require('./routes/price.js'));
+app.use('/api/sales', require('./routes/sales.js'));
 
+app.listen(port, () => console.log(`pricescraper running on port ${port}`)); //eslint-disable-line
