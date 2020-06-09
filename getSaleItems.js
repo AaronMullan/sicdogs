@@ -1,6 +1,6 @@
-const marketplace = require('discogs-marketplace-js');
-
 function priceGetter(id) {
+  const marketplace = require('discogs-marketplace-js');
+
   const searchParameters = {
     id,
     type: 'release',
@@ -10,6 +10,8 @@ function priceGetter(id) {
     },
   };
 
-  marketplace.search(searchParameters, (result) => result);
+  marketplace.search(searchParameters, (result) => {
+    console.log(result);
+  });
 }
 module.exports = priceGetter;

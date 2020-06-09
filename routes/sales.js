@@ -6,6 +6,6 @@ module.exports = Router()
     const { id } = req.params;
 
     priceGetter(id)
-      .then((prices) => res.send(prices))
+      .then((prices) => console.log(prices))
       .catch(next);
   });
