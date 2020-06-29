@@ -19,7 +19,8 @@
     "eslint-plugin-import": "^2.20.2"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC"
