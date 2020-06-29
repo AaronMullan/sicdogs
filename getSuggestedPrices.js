@@ -8,7 +8,7 @@ const throttle = new Throttle({
   ratePer: 60000,
 });
 
-const getSuggestedPrices = async (releaseID) => {
+const getSuggestedPrices = async (releaseID) => { // eslint-disable-line
   try {
     const response = await superagent
       .get(`https://api.discogs.com/marketplace/price_suggestions/${releaseID}`)

@@ -1,10 +1,9 @@
 const { Router } = require('express');
-// const priceGetter = require('../getSaleItems');
 const marketplace = require('discogs-marketplace-js');
 
 
 module.exports = Router()
-  .get('/:id', (req, res, next) => {
+  .get('/:id', (req, res) => {
     const { id } = req.params;
     const searchParameters = {
       id,
